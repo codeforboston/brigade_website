@@ -1,0 +1,28 @@
+!!!
+head
+	meta(name='viewport', content='width=device-width, user-scalable=no')
+	title Code for Boston
+	link(rel='stylesheet', href='/assets/css/style.css')
+body
+	header#header
+		hgroup(role='banner')
+			h1#site-title Code/for/Boston
+		nav(role='navigation')
+			ul#nav
+				li
+					a(href='http://www.meetup.com/Code-for-Boston/') Meetup
+				li
+					a(href='https://github.com/codeforboston') GitHub
+
+	section#modules(role='complementary')
+		aside.module(role='complementary')
+			strong Latest commit
+		aside.module(role='complementary')
+			em Latest project
+
+	article#content(role='main')
+		block content
+
+	footer#footer(role='contentinfo')
+		em(title='YOU are Awesome, just for visiting this site!').
+			Powered by Awesome

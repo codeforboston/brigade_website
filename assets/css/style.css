@@ -1,0 +1,76 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'),
+		url(OpenSans-Normal.woff) format('woff');
+}
+
+body {margin:0 auto 1.43em; padding:4em 0 0; width:63em;
+	background:rgb(237,237,237); color:rgb(22,22,22);
+	font-family:'Open Sans',sans-serif;}
+#header,.module,#content {padding:.25em 1em;}
+#modules {padding:0;}
+.module {background:rgb(242,242,242); margin:0 0 .5em;}
+#content {background:white;}
+#footer {position:relative; top:3em; padding:.25em 0 1em; clear:both;
+	text-align:right; border-top:2pt solid rgb(222,222,222); font-size:80%;}
+#nav {text-indent:0; font-size:90%;}
+
+#site-title {padding:0; margin:0; border-bottom:2pt dotted rgb(222,222,222);}
+
+a {color:rgb(42, 143, 143); text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+ul {list-style-type:none; text-indent:-2em; margin-left:3em; padding:0;}
+li {margin-bottom:3px;}
+form {padding:0; margin:0;}
+h1,h2,h3,h4,h5,h6,strong {font-weight:normal;}
+strong {color:rgb(042,042,042); font-size:110%;}
+em {font-style:normal; text-decoration:underline;}
+h1,h2,legend {font-size:160%;}
+fieldset {margin:1ex 0; border:none;}
+label {padding:4px 10px; border-radius:5px; background:rgb(247,247,247);}
+input,textarea {border:2px solid rgb(237,237,237); color:rgb(22,22,22);
+	margin:2px 0;}
+textarea {width:100%; box-sizing:border-box; padding:5px;}
+iframe {border:none; overflow:hidden;}
+.code,code,pre {background:rgb(247,247,247); border:1px solid rgb(232,232,232);}
+code {white-space:nowrap;}
+tr:nth-child(even) {background:rgb(247,247,247);}
+td {border-top:1px solid rgb(222,222,222); padding-top:0;}
+thead {text-align:left;}
+pre {overflow-x:auto; padding:3px;}
+
+.clear {clear:both;}
+.left {float:left; margin:0 1em 1em 0;}
+.right {float:right; margin:0 0 1em 1em;}
+.center {text-align:center;}
+.hidden {display:none;}
+.linky {cursor:pointer;}
+
+#header {position:fixed; width:13em; text-align:right;}
+#modules {float:right; width:13em; margin:0 0 0 1em;}
+#content {float:right; width:31em; box-shadow:0 0 1em rgb(232,232,232);}
+
+@media mobile, handheld, all and (max-width:63em),
+all and (view-mode:minimized){
+	body {width:auto; padding:1em;}
+	#header {position:static; width:auto; text-align:start;
+		border-bottom:3pt solid rgb(222,222,222); margin:0 0 10px;}
+	#site-title {font-size:2.7em; border-bottom:none;}
+	#modules,#content {float:none; width:auto;}
+	#modules {margin:0;}
+	#nav {margin:0 0 0 2em; padding:0 0 .25em;}
+	#nav>li {display:inline; margin:0 1em 0 0; padding:0 0 0 .5em;
+		border-left:2pt solid rgb(222,222,222);}
+	img {max-width:100%;}
+}
+@media print{
+	body {background:white; color:black; padding:0; margin:0; width:100%;}
+	.module {display:none;}
+}

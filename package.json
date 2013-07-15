@@ -1,0 +1,16 @@
+{
+	"name": "code-for-boston",
+	"description": "Website for Code for Boston; a Code for America Brigade",
+	"private": true,
+	"license": "MPL 2.0",
+	"version": "2013.07.14",
+	"author": "Richard Laskey <me@rlaskey.org> (http://rlaskey.org)",
+	"dependencies": {
+		"express": "*",
+		"jade": "*",
+		"mysql": "*"
+	},
+	"scripts": {
+		"start": "node server.js"
+	}
+}
