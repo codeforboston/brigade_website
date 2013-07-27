@@ -1,16 +1,6 @@
 var config = require('./config'),
 	express = require('express');
 
-/*
-var mysql = require('mysql');
-var dbc = mysql.createConnection(config.mysql_details);
-dbc.connect();
-dbc.query('SELECT 1 + 1 AS solution', function(err, rows, fields){
-	if (err) throw err;
-	console.log('solution is: ',rows[0].solution);
-});
-*/
-
 var app = express()
 	.use(express.methodOverride())
 	.set('view engine', 'jade')
