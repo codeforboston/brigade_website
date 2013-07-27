@@ -14,7 +14,7 @@ dbc.query('SELECT 1 + 1 AS solution', function(err, rows, fields){
 var app = express()
 	.use(express.methodOverride())
 	.set('view engine', 'jade')
-	.set('views', 'application/views');
+	.set('views', 'views');
 app.use(app.router);
 if(config.dev) app.use(express.logger('dev'));
 
