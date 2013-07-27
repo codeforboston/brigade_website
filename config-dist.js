@@ -6,5 +6,7 @@ module.exports = {
 		"password": "boomshakalaka"
 	},
 	"port": 8080,
-	"dev": false
+	"dev": false,
+	"session_secret": "pleasePleaseChangeThis",
+	"persona_audience": "http://server:port"
 };

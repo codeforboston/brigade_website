@@ -8,7 +8,8 @@
 	"dependencies": {
 		"express": "*",
 		"jade": "*",
-		"mysql": "*"
+		"mysql": "*",
+		"express-persona": "*"
 	},
 	"scripts": {
 		"start": "node app.js"

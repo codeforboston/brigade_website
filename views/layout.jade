@@ -13,6 +13,16 @@ body
 					a(href='http://www.meetup.com/Code-for-Boston/') Meetup
 				li
 					a(href='https://github.com/codeforboston') GitHub
+				if session.email
+					li
+						a(href='#')#login.hidden Login
+					li
+						a(href='#')#logout Logout #{session.email}
+				else
+					li
+						a(href='#')#login Login
+					li
+						a(href='#')#logout.hidden Logout
 
 	section#modules(role='complementary')
 		aside.module(role='complementary')
@@ -26,3 +36,6 @@ body
 	footer#footer(role='contentinfo')
 		em(title='YOU are Awesome, just for visiting this site!').
 			Powered by Awesome
+
+	script(src='https://login.persona.org/include.js')
+	script(src='/assets/js/persona.js')
