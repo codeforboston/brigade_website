@@ -1,5 +1,4 @@
 var config = require('./config'),
-	http = require('http'),
 	express = require('express');
 
 /*
