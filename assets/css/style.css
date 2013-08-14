@@ -17,7 +17,8 @@ body {margin:0 auto 1.43em; padding:4em 0 0; width:63em;
 #modules {padding:0;}
 .module {background:rgb(242,242,242); margin:0 0 .5em;}
 #content {background:white;}
-#footer {position:relative; top:3em; padding:.25em 0 1em; clear:both;
+#footer {position:relative; top:3em; width:58em; left:20em;
+	padding:.25em 0 1em; clear:both;
 	text-align:right; border-top:2pt solid rgb(222,222,222); font-size:80%;}
 #nav {text-indent:0; font-size:90%;}
 
@@ -68,6 +69,7 @@ all and (view-mode:minimized){
 	#nav {margin:0 0 0 2em; padding:0 0 .25em;}
 	#nav>li {display:inline; margin:0 1em 0 0; padding:0 0 0 .5em;
 		border-left:2pt solid rgb(222,222,222);}
+	#footer {width:auto; left:0;}
 	img {max-width:100%;}
 }
 @media print{
