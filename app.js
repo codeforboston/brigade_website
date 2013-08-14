@@ -21,6 +21,20 @@ app.get('/', function(req, res){
 	res.render('lorem');
 });
 
+var pages = ['about', 'projects', 'press', 'contact', 'members'];
+
+pages.forEach(function(page){
+   app.get('/'+page, function(req, res){
+       res.locals.session = req.session;
+       res.render(page);
+   });
+});
+
+app.get('/:page', function(req, res){
+    res.locals.session = req.session;
+    res.render('lorem');
+});
+
 app.use(function(err,req,res,next){
 	console.error(err.stack);
 	res.send(500, ':/');
