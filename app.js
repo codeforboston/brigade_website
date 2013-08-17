@@ -18,7 +18,7 @@ app.use('/' + assets_directory, express.static(assets_directory));
 
 app.get('/', function(req, res){
 	res.locals.session = req.session;
-	res.render('lorem');
+	res.render('home');
 });
 
 var pages = ['about', 'projects', 'press', 'contact', 'members'];
@@ -28,11 +28,6 @@ pages.forEach(function(page){
        res.locals.session = req.session;
        res.render(page);
    });
-});
-
-app.get('/:page', function(req, res){
-    res.locals.session = req.session;
-    res.render('lorem');
 });
 
 app.use(function(err,req,res,next){
