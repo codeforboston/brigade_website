@@ -21,7 +21,16 @@ app.get('/', function(req, res){
 	res.render('home');
 });
 
-var pages = ['about', 'projects', 'press', 'contact', 'members'];
+var pages = ['about', 'projects', 'press', 'contact'];
+
+var members = [{name: 'Aaron'}, {name: 'Matt'}];
+
+app.get('/members', function(request, response){
+	response.locals.session = request.session;
+
+	response.render('members', {members: members});
+});
+
 
 pages.forEach(function(page){
    app.get('/'+page, function(req, res){
