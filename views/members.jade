@@ -1,1 +1,5 @@
 extends layout.jade
+
+block content
+	for member in members
+		p= member.name
