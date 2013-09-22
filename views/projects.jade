@@ -1,14 +1,7 @@
 extends layout.jade
 
 block content
-	p Here are a few projects people are currently working on:
-	ul
-		li
-			h3 Pantry Pickup
-			p.
-				A web app to help people find local food pantries, and which
-				pantries might benefit most from a specific donation.
-		li
-			h3 Code for Boston website
-			p Yes, this site is still under construction!
-			img(src="http://www.mccfcanoncity.com/images/under-construction.gif")
+	for project in projects
+		h2= project.name
+		p.blurb= project.blurb
+		a(href=project.link) Project page

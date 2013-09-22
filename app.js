@@ -32,6 +32,23 @@ app.get('/members', function(request, response){
 });
 
 
+var projects = [
+	{
+		name: 'Brigade Website',
+		link: 'http://www.github.com/codeforboston/brigade_website',
+		blurb: 'Trying to figure out what\'s important for this site to have.'
+	},
+	{
+		name: 'Pantry Pickup',
+		link: 'https://github.com/codeforboston/pantry_pickup',
+		blurb: 'A web app to help people find local food pantries, and which pantries might benefit most from a specific donation.'
+	}];
+
+app.get('/projects', function(request, response){
+	response.locals.session = request.session;
+	response.render('projects', {projects: projects});
+});
+
 pages.forEach(function(page){
 	app.get('/'+page, function(req, res){
 			res.locals.session = req.session;
